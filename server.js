@@ -1,6 +1,7 @@
-import express from "express";
-import nunjucks from "nunjucks";
-import sqlite_pkg from "sqlite3";
+const express = require("express");
+const nunjucks = require("nunjucks");
+const sqlite_pkg = require("sqlite3");
+const { encodeHTML } = require("./library.js");
 
 // Express-JS App konfigurieren:
 const app = express();
@@ -60,5 +61,6 @@ app.get("/json-demo", (req, res) => {
 
 // ... und schlussendlich wird der App-Server hochgefahren:
 app.listen(port, () => {
+  console.log(`Encode HTML: ${encodeHTML(["<script>alert('fooo')</script>"])}`);
   console.log(`Example app listening at http://localhost:${port}`);
 });
