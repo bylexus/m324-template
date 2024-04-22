@@ -24,3 +24,10 @@ $ npm install
 ```shell
 $ npm run serve
 ```
+
+## Tests
+
+```shell
+$ npm run test
+```
+
