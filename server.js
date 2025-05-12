@@ -34,7 +34,7 @@ app.set("views", "./views");
 app.get("/", (req, res) => {
   // Wir laden ein paar Beispieldaten aus unserer Beispiel-DB:
   const stm = db.all(
-    "SELECT * FROM artists WHERE Name LIKE ?",
+    "SELECT * FROM artists WHERE Name LIKE ? order by Random()",
     ["A%"],
     (err, rows) => {
       // wir rendern das Nunjucks-Template 'hello.html':
