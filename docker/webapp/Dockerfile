@@ -1,4 +1,4 @@
-FROM node:22
+FROM node:24-trixie
 
 WORKDIR /app
 EXPOSE 3000
